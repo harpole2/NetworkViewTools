@@ -2,8 +2,13 @@ library(ggplot2)
 library(stringr)
 library(reshape2)
 library(plotly)
-setwd("/data/DEShaw_1/network/communities/test/chain_growth/new/dist_justSource")
+
+#SET YOUR WORKING DIRECTORY
+setwd("/home/me/myDirect/")
+#Prefix for your files
 files<-list.files(pattern=glob2rx("grow*.dat"))
+
+#this is all pretty specific to naming
 under<-str_locate_all(files[1], "_")
 under<-unlist(under)
 base<-substr(files[1],1,max(under))
