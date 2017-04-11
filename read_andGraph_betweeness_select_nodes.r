@@ -62,7 +62,7 @@ for (i in 1:nrow(red_data)){
   ggsave(name_save)
 }
 
-red_data_long<-melt(red_data, value.name = "Residue")
+red_data_long<-melt(red_data, id = "Residue")
 all_res <- ggplot(data=red_data_long, aes(variable, value, group=factor(Residue))) +
   theme_bw() +
   theme(panel.grid.major = element_blank(), panel.grid.minor = element_blank()) +
